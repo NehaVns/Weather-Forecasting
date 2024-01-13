@@ -17,4 +17,23 @@ Add your API here in constant file (https://openweathermap.org/api):-
 <img src= "https://github.com/Suryansh1720001/Advanced-Weather-App/assets/85965606/035067e4-9513-4b48-a3c3-fe8ecb33a6a6" width="50%" height="40%">
 
 
+## Download & install
+
+First, clone the repository with the 'clone' command, or just download the zip.
+
+```
+$ https://github.com/NehaVns/Weather-Forecasting.git
+```
+
+Then, download Android Studio , 
+There you go, you can now open & edit the project. Enjoy!
+
+## Built with
+- [Android Studio](https://developer.android.com/studio/index.html/) - Tools for building apps on every type of Android device.
+
+
+## Contributing
+
+If you want to take the time to make this project better, please read the issues first. Then, you can open an new [issue], or a [pull request]
+
 
