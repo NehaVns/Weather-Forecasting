@@ -690,7 +690,7 @@ class MainActivity : AppCompatActivity() {
     private val mLocationCallback = object : LocationCallback() {
         override fun onLocationResult(locationResult: LocationResult) {
 
-            val mLastLocation: Location = locationResult.lastLocation
+            val mLastLocation: Location = locationResult.lastLocation!!
             // TODO (STEP 6: Assign the values to the global variables here
             //  to use that for api calling. And remove the latitude and
             //  longitude from the parameter as we can directly use it while
