@@ -1,19 +1,31 @@
+import java.util.Properties
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id ("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 
 }
 
 android {
     namespace 'com.example.weatherapp'
-    compileSdk 33
+    compileSdk 34
+    buildFeatures.buildConfig = true
 
     defaultConfig {
         applicationId "com.example.weatherapp"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
+
+
+
+        def properties = new Properties()
+        def localPropertiesFile = rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            localPropertiesFile.withInputStream { properties.load(it) }
+        }
+        buildConfigField("String", "OPENWEATHER_API_KEY", "\"${properties.getProperty("apiKey") ?: ""}\"")
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -39,9 +51,9 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -49,11 +61,11 @@ dependencies {
 
 
     // We have added the Google Material Dependency
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.android.material:material:1.11.0'
 
 
     // This is for getting the location
-    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
 
     // Dexter runtime permissions
     // https://github.com/Karumi/Dexter
