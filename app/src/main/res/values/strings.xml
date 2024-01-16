@@ -4,4 +4,6 @@
 
     <string name="image_contentDescription">image</string>
     <string name="miles_per_hour">miles/hour</string>
+    <string name="navigation_open">navigation_open</string>
+    <string name="navigation_close">navigation_close</string>
 </resources>
