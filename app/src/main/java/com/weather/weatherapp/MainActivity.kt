@@ -141,12 +141,18 @@ class MainActivity : AppCompatActivity() {
         navigationView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.feed -> closeDrawer()
+                R.id.aboutUs -> aboutUs()
 
 
             }
             closeDrawer()
             false
         }
+    }
+
+    private fun aboutUs() {
+        val intent = Intent(this@MainActivity, AboutUs::class.java)
+        startActivity(intent)
     }
 
     // TODO (STEP 4: Now add the override methods to load the menu file and perform the selection on item click.)

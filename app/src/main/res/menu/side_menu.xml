@@ -9,5 +9,10 @@
         android:title="Live Weather" />
 
 
+    <item
+        android:id="@+id/aboutUs"
+        android:icon="@drawable/ic_cloud"
+        android:title="About Page" />
+
 
 </menu>

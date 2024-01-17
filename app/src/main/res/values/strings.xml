@@ -6,4 +6,5 @@
     <string name="miles_per_hour">miles/hour</string>
     <string name="navigation_open">navigation_open</string>
     <string name="navigation_close">navigation_close</string>
+    <string name="version">version\n</string>
 </resources>
