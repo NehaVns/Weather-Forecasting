@@ -7,4 +7,5 @@
     <string name="navigation_open">navigation_open</string>
     <string name="navigation_close">navigation_close</string>
     <string name="version">version\n</string>
+    <string name="share_title">Shring the weather application\n</string>
 </resources>

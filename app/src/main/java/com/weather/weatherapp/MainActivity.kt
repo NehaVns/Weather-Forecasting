@@ -12,6 +12,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
+import android.text.Html
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -142,12 +143,27 @@ class MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.feed -> closeDrawer()
                 R.id.aboutUs -> aboutUs()
+                R.id.btnshare -> share()
 
 
             }
             closeDrawer()
             false
         }
+    }
+
+    private fun share() {
+        var body = "Hey there! I am sharing you the weather application. Try this out"
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "text/plain"
+        shareIntent.putExtra(Intent.EXTRA_TEXT, body)
+        startActivity(
+            Intent.createChooser(
+                shareIntent,
+                getString(R.string.share_title)
+            )
+        )
+
     }
 
     private fun aboutUs() {
@@ -171,25 +187,18 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            // TODO (STEP 7: Now finally, make an api call on item selection.)
-            // START
             R.id.action_refresh -> {
                 getLocationWeatherDetails()
                 true
             }
-
             else -> super.onOptionsItemSelected(item)
-            // END
         }
     }
-    // END
 
     /**
      * A function which is used to verify that the location or GPS is enable or not of the user's device.
      */
     private fun isLocationEnabled(): Boolean {
-
-        // This provides access to the system location services.
         val locationManager: LocationManager =
             getSystemService(Context.LOCATION_SERVICE) as LocationManager
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER) || locationManager.isProviderEnabled(
@@ -408,7 +417,7 @@ class MainActivity : AppCompatActivity() {
                 "02n" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
                 "03n" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
                 "10n" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
-                "11n" -> binding?.ivMain?.setImageResource(R.drawable.rain)
+                "11n" -> binding?.ivMain?.setImageResource(R.drawable.evening)
                 "13n" -> binding?.ivMain?.setImageResource(R.drawable.snowflake)
             }
         }

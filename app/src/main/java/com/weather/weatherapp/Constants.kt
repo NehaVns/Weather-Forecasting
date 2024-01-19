@@ -16,9 +16,7 @@ object Constants {
     const val BASE_URL: String = "http://api.openweathermap.org/data/"
     const val METRIC_UNIT: String = "metric"
 
-    /**
-     * This function is used check the weather the device is connected to the Internet or not.
-     */
+
     fun isNetworkAvailable(context: Context): Boolean {
         // It answers the queries about the state of network connectivity.
         val connectivityManager =
