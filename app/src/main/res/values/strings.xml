@@ -10,4 +10,5 @@
     <string name="email">nehavns2848@gmail.com\n</string>
     <string name="subject_for_email">Report Bug - Weather APP</string>
     <string name="email_body">Email body</string>
+    <string name="share_title">Shring the weather application\n</string>
 </resources>
