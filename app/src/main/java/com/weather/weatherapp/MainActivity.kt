@@ -143,11 +143,26 @@ class MainActivity : AppCompatActivity() {
                 R.id.feed -> closeDrawer()
                 R.id.aboutUs -> aboutUs()
 
+                R.id.reportBug ->ReportBug()
 
             }
             closeDrawer()
             false
         }
+    }
+
+    private fun ReportBug() {
+        val recipient = getString(R.string.email)
+        val subject = getString(R.string.subject_for_email)
+        val message = getString(R.string.email_body)
+
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+            putExtra(Intent.EXTRA_TEXT, message)
+        }
+        startActivity(intent)
     }
 
     private fun aboutUs() {

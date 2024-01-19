@@ -7,4 +7,7 @@
     <string name="navigation_open">navigation_open</string>
     <string name="navigation_close">navigation_close</string>
     <string name="version">version\n</string>
+    <string name="email">nehavns2848@gmail.com\n</string>
+    <string name="subject_for_email">Report Bug - Weather APP</string>
+    <string name="email_body">Email body</string>
 </resources>

@@ -15,4 +15,15 @@
         android:title="About Page" />
 
 
+
+
+
+
+
+    <item android:id="@+id/reportBug"
+        android:icon="@drawable/baseline_bug_report_24"
+        android:title ="Report Bug"
+        />
+
+
 </menu>
