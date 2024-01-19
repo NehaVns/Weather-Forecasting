@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EDF8FD"
     android:id="@+id/menu_drawer"
     tools:context="com.weather.weatherapp.MainActivity">
 
@@ -83,6 +84,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
+                    android:background="#EDF8FD"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
 
@@ -136,6 +138,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
+                    android:background="#EDF8FD"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
 
@@ -198,6 +201,7 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="#EDF8FD"
                     android:padding="@dimen/card_view_content_padding">
 
                     <ImageView
@@ -251,6 +255,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
+                    android:background="#EDF8FD"
                     android:padding="@dimen/card_view_content_padding">
 
                     <ImageView
@@ -305,6 +310,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
+                android:background="#EDF8FD"
                 android:padding="@dimen/card_view_content_padding">
 
                 <LinearLayout
@@ -415,7 +421,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:backgroundTint="#fff7fe"
+        android:background="#EDF8FD"
         android:theme="@style/Theme.AppCompat.DayNight"
         app:headerLayout="@layout/menu_header"
         app:menu="@menu/side_menu"
