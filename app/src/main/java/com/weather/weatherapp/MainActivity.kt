@@ -145,6 +145,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.aboutUs -> aboutUs()
                 R.id.btnshare -> share()
 
+                R.id.reportBug ->ReportBug()
 
             }
             closeDrawer()
@@ -152,6 +153,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+    private fun ReportBug() {
+        val recipient = getString(R.string.email)
+        val subject = getString(R.string.subject_for_email)
+        val message = getString(R.string.email_body)
+
+        val intent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:")
+            putExtra(Intent.EXTRA_EMAIL, arrayOf(recipient))
+            putExtra(Intent.EXTRA_SUBJECT, subject)
+            putExtra(Intent.EXTRA_TEXT, message)
+        }
+        startActivity(intent)
+    }
+    
     private fun share() {
         var body = "Hey there! I am sharing you the weather application. Try this out"
         val shareIntent = Intent(Intent.ACTION_SEND)
@@ -163,7 +179,6 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.share_title)
             )
         )
-
     }
 
     private fun aboutUs() {
