@@ -1,8 +1,8 @@
 package com.weather.weatherapp
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.weatherapp.BuildConfig
+import android.os.Bundle
+import androidx.viewbinding.BuildConfig
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityAboutUsBinding
 
@@ -19,8 +19,9 @@ class AboutUs : AppCompatActivity() {
             onBackPressed()
         }
 
-        binding?.tvVersionName?.setText(getString(R.string.version, BuildConfig.VERSION_NAME))
+        binding.tvVersionName?.setText(getString(R.string.version,com.example.weatherapp.BuildConfig.VERSION_NAME))
 
 
     }
+
 }

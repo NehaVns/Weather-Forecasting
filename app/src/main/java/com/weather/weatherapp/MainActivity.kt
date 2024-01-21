@@ -182,7 +182,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun aboutUs() {
-        val intent = Intent(this@MainActivity, AboutUs::class.java)
+        val intent=Intent(this,AboutUs::class.java)
         startActivity(intent)
     }
 
