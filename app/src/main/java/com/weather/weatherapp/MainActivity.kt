@@ -12,7 +12,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
-import android.text.Html
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -34,33 +33,23 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.weather.Network.WeatherService
-import com.weatherapp.models.WeatherResponse
+import com.weather.models.WeatherResponse
 import retrofit.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-// OpenWeather Link : https://openweathermap.org/api
-/**
- * The useful link or some more explanation for this app you can checkout this link :
- * https://medium.com/@sasude9/basic-android-weather-app-6a7c0855caf4
- */
 class MainActivity : AppCompatActivity() {
 
     // A fused location client variable which is further user to get the user's current location
     private lateinit var mFusedLocationClient: FusedLocationProviderClient
     private var binding: ActivityMainBinding? = null
 
-    // A global variable for Progress Dialog
     private var mProgressDialog: Dialog? = null
     private lateinit var navigationView: NavigationView
     private lateinit var drawerlayout: DrawerLayout
 
     private lateinit var toolbar: Toolbar
 
-
-    // TODO (STEP 5: Make the latitude and longitude variables global to use it in the menu item selection to refresh the data.)
-    // START
-    // A global variable for Current Latitude
     private var mLatitude: Double = 0.0
 
     // A global variable for Current Longitude
@@ -145,7 +134,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.aboutUs -> aboutUs()
                 R.id.btnshare -> share()
 
-                R.id.reportBug ->ReportBug()
+                R.id.reportBug -> ReportBug()
 
             }
             closeDrawer()
@@ -167,7 +156,7 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-    
+
     private fun share() {
         var body = "Hey there! I am sharing you the weather application. Try this out"
         val shareIntent = Intent(Intent.ACTION_SEND)
@@ -206,6 +195,7 @@ class MainActivity : AppCompatActivity() {
                 getLocationWeatherDetails()
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -306,10 +296,6 @@ class MainActivity : AppCompatActivity() {
                 /** Create the Retrofit instances. */
                 .build()
 
-            /**
-             * Here we map the service interface in which we declares the end point and the API type
-             *i.e GET, POST and so on along with the request parameter which are required.
-             */
             val service: WeatherService =
                 retrofit.create<WeatherService>(WeatherService::class.java)
 
