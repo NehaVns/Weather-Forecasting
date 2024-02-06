@@ -26,11 +26,6 @@ class Splash_Screen : AppCompatActivity() {
 
         setContentView(binding?.root)
 
-
-        val typeface: Typeface =
-            Typeface.createFromAsset(assets, "museo.ttf")
-        binding?.tvTaaveezHeading?.typeface = typeface
-
         val thread: Thread = object : Thread() {
             override fun run() {
                 try {
