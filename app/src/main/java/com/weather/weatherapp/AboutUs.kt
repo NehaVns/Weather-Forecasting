@@ -19,7 +19,6 @@ class AboutUs : AppCompatActivity() {
             onBackPressed()
         }
 
-        binding?.tvVersionName?.setText(getString(R.string.version, BuildConfig.VERSION_NAME))
 
 
     }

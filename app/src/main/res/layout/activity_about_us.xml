@@ -47,7 +47,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/ic_launcher_foreground"
+        android:src="@drawable/weather_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_toolbar" />
@@ -58,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-
+android:textStyle="bold"
         android:text="ABOUT US"
         android:textAlignment="center"
         android:textColor="@color/black"
@@ -66,6 +66,21 @@
         app:layout_constraintEnd_toEndOf="@id/iv_appImage"
         app:layout_constraintStart_toStartOf="@id/iv_appImage"
         app:layout_constraintTop_toBottomOf="@id/iv_appImage" />
+
+
+    <TextView
+        android:id="@+id/tv_aboutUsContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="12dp"
+        android:text="@string/About_Content"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="30dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_appImage"
+        app:layout_constraintStart_toStartOf="@id/iv_appImage"
+        app:layout_constraintTop_toBottomOf="@id/tv_aboutUs" />
 
 
     <View
@@ -76,18 +91,17 @@
         android:background="#323131"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_aboutUs" />
+        app:layout_constraintTop_toBottomOf="@id/tv_aboutUsContent" />
 
     <TextView
         android:id="@+id/tv_versionName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-
         android:text="Version 1.1.0"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/view"
