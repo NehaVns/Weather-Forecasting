@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@color/white"
-android:orientation="vertical"
-android:gravity="center"
-tools:context="com.weather.weatherapp.Splash_Screen">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.weather.weatherapp.Splash_Screen">
 
-<ImageView
-    android:id="@+id/ivBook"
-    android:layout_width="wrap_content"
-    android:layout_height="350dp"
-    android:src="@drawable/weather_icon"
-    app:layout_constraintBottom_toTopOf="@+id/flheadingMain"
-    android:layout_marginBottom="40dp"
-    />
-
+    <ImageView
+        android:id="@+id/ivBook"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/weather_icon"
+        app:layout_constraintBottom_toTopOf="@+id/flheadingMain" />
 
 
-
-<TextView
-    android:id="@+id/tvTaaveezHeading"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:fontFamily="serif"
-    android:text="Weather"
-    android:textColor="@color/black"
-    android:textSize="80sp"
-    />
-
+    <TextView
+        android:id="@+id/tvTaaveezHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="serif"
+        android:text="Weather"
+        android:textColor="@color/black"
+        android:textSize="80sp" />
 
 
 </LinearLayout>

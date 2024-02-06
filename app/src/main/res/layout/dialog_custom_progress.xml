@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--TODO (STEP 1: A design for the progress dialog.)-->
-<!--START-->
+<?xml version="1.0" encoding="utf-8"?><!--TODO (STEP 1: A design for the progress dialog.)-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,5 +18,4 @@
         android:textColor="@android:color/black"
         android:textSize="@dimen/progress_bar_text_size" />
 
-</LinearLayout>
-    <!--END-->
+</LinearLayout><!--END-->

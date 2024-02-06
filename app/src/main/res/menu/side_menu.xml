@@ -11,8 +11,7 @@
     <item
         android:id="@+id/btnshare"
         android:icon="@drawable/ic_share"
-        android:title="Share"
-        />
+        android:title="Share" />
 
     <item
         android:id="@+id/aboutUs"
@@ -20,9 +19,9 @@
         android:title="About Page" />
 
 
-    <item android:id="@+id/reportBug"
+    <item
+        android:id="@+id/reportBug"
         android:icon="@drawable/baseline_bug_report_24"
-        android:title ="Report Bug"
-        />
+        android:title="Report Bug" />
 
 </menu>
