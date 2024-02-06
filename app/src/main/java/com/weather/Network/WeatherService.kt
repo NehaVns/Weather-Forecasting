@@ -1,6 +1,6 @@
 package com.weather.Network
 
-import com.weatherapp.models.WeatherResponse
+import com.weather.models.WeatherResponse
 import retrofit.Call
 import retrofit.http.GET
 import retrofit.http.Query
@@ -13,5 +13,5 @@ interface WeatherService {
         @Query("lon") laon: Double,
         @Query("units") units: String?,
         @Query("appid") appid: String?,
-    ) : Call<WeatherResponse>
+    ): Call<WeatherResponse>
 }

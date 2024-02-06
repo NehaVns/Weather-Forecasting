@@ -1,7 +1,6 @@
 package com.weather.weatherapp
 
 import android.content.Intent
-import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
 import androidx.annotation.RequiresApi
