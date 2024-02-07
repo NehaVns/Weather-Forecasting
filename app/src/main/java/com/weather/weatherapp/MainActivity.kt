@@ -12,6 +12,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
+import android.text.Html
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -132,16 +133,18 @@ class MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.feed -> closeDrawer()
                 R.id.aboutUs -> aboutUs()
-                R.id.btnshare -> share()
 
                 R.id.reportBug -> ReportBug()
                 R.id.ic_feedback -> feedback()
+                R.id.ic_share -> share()
 
             }
             closeDrawer()
             false
         }
     }
+
+
 
 
     private fun feedback(){
@@ -158,6 +161,21 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    private fun share(){
+        var body = "Let's check this application - Weather App. " +
+                "This gives the best weather in fetching your location"
+        val shareIntent = Intent(Intent.ACTION_SEND)
+        shareIntent.type = "text/plain"
+        shareIntent.putExtra(Intent.EXTRA_TEXT, body)
+        startActivity(
+            Intent.createChooser(
+                shareIntent,
+                getString(R.string.share_title)
+            )
+        )
+    }
+
+
     private fun ReportBug() {
         val recipient = getString(R.string.email)
         val subject = getString(R.string.subject_for_email)
@@ -172,18 +190,6 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun share() {
-        var body = "Hey there! I am sharing you the weather application. Try this out"
-        val shareIntent = Intent(Intent.ACTION_SEND)
-        shareIntent.type = "text/plain"
-        shareIntent.putExtra(Intent.EXTRA_TEXT, body)
-        startActivity(
-            Intent.createChooser(
-                shareIntent,
-                getString(R.string.share_title)
-            )
-        )
-    }
 
     private fun aboutUs() {
         val intent = Intent(this@MainActivity, AboutUs::class.java)
