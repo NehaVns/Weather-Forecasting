@@ -24,4 +24,9 @@
         android:icon="@drawable/baseline_bug_report_24"
         android:title="Report Bug" />
 
+    <item
+        android:id="@+id/ic_feedback"
+        android:icon="@drawable/baseline_feedback_24"
+        android:title="Feedback" />
+
 </menu>
