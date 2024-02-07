@@ -27,6 +27,7 @@
 
         <TextView
             android:id="@+id/appName"
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -48,6 +49,8 @@
         android:layout_marginTop="30dp"
         android:src="@drawable/weather_icon"
         app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/protestrevolution_regular"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/main_toolbar" />
 
@@ -58,6 +61,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="ABOUT US"
+        android:fontFamily="@font/protestrevolution_regular"
+
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -72,6 +77,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
+        android:fontFamily="@font/protestrevolution_regular"
+
         android:layout_marginVertical="12dp"
         android:text="@string/About_Content"
         android:textAlignment="center"
@@ -100,6 +107,8 @@
         android:text="Version 1.1.0"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:fontFamily="@font/protestrevolution_regular"
+
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
