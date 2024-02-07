@@ -9,11 +9,6 @@
         android:title="Live Weather" />
 
     <item
-        android:id="@+id/btnshare"
-        android:icon="@drawable/ic_share"
-        android:title="Share" />
-
-    <item
         android:id="@+id/aboutUs"
         android:icon="@drawable/ic_cloud"
         android:title="About Page" />
@@ -28,5 +23,11 @@
         android:id="@+id/ic_feedback"
         android:icon="@drawable/baseline_feedback_24"
         android:title="Feedback" />
+
+    <item
+        android:id="@+id/ic_share"
+        android:icon="@drawable/baseline_share_24"
+        android:title="Share Application" />
+
 
 </menu>
