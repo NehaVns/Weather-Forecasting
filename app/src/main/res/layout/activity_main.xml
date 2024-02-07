@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
+                android:fontFamily="@font/protestrevolution_regular"
                 android:gravity="center"
                 android:text="@string/app_name"
                 android:textColor="@color/white"
@@ -91,6 +92,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
@@ -101,6 +104,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
                             tools:text="condition" />
@@ -145,6 +150,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
@@ -155,6 +162,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
                             tools:text="per cent" />
@@ -207,6 +216,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
@@ -217,6 +227,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
                             tools:text="Maximum" />
@@ -261,6 +273,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
@@ -271,6 +285,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:text="@string/miles_per_hour"
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size" />
@@ -321,6 +337,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
@@ -331,6 +349,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="end"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
                             tools:text="Country" />
@@ -368,6 +388,8 @@
                             android:id="@+id/tv_sunrise_time"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/protestrevolution_regular"
+
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
                             tools:text="Sunrise" />
@@ -393,7 +415,9 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="Sunset" />
+                            tools:text="Sunset"
+                            android:fontFamily="@font/protestrevolution_regular"
+                            />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
