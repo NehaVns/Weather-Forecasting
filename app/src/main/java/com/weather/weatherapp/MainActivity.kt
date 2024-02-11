@@ -143,6 +143,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_privacy -> privacy()
                 R.id.ic_share_Code ->  openLink("https://github.com/NehaVns/Weather-Forecasting")
                 R.id.ic_open -> Open_souce()
+                R.id.ic_version -> Version()
             }
             closeDrawer()
             false
@@ -150,6 +151,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private fun Version() {
+        Toast.makeText(this@MainActivity,"Version of the applicationo is : 1.1.0", Toast.LENGTH_LONG).show()
+    }
     private fun openLink(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         startActivity(intent)
