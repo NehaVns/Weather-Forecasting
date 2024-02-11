@@ -290,30 +290,11 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    // TODO (STEP 4: Now add the override methods to load the menu file and perform the selection on item click.)
-    // START
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
     private fun closeDrawer() {
         val drawer = findViewById<DrawerLayout>(R.id.menu_drawer)
         drawer.closeDrawer(GravityCompat.START)
     }
 
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_refresh -> {
-                getLocationWeatherDetails()
-                true
-            }
-
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
 
     /**
      * A function which is used to verify that the location or GPS is enable or not of the user's device.
