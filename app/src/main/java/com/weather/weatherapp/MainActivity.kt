@@ -54,13 +54,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
 
     private var mLatitude: Double = 0.0
-    private var sys_mess : String = "Mess"
+    private var sys_mess: String = "Mess"
     private var max_Temp: String = "Mess"
     private var min_Temp: String = "Mess"
 
     // A global variable for Current Longitude
     private var mLongitude: Double = 0.0
-    private var sea_level : String = "Mess"
+    private var sea_level: String = "Mess"
+    private var humidity_level: String = "Mess"
 
     // END
 
@@ -148,7 +149,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_feedback -> feedback()
                 R.id.ic_share -> share()
                 R.id.ic_privacy -> privacy()
-                R.id.ic_share_Code ->  openLink("https://github.com/NehaVns/Weather-Forecasting")
+                R.id.ic_share_Code -> openLink("https://github.com/NehaVns/Weather-Forecasting")
                 R.id.ic_open -> Open_souce()
                 R.id.ic_version -> Version()
             }
@@ -160,7 +161,6 @@ class MainActivity : AppCompatActivity() {
             popup()
         }
     }
-
 
 
     private fun popup() {
@@ -181,7 +181,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.coordinates -> {
 
 
-                    showLocationDialog(this,mLatitude,mLongitude )
+                    showLocationDialog(this, mLatitude, mLongitude)
 
                     true
                 }
@@ -190,7 +190,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.Sys_Message -> {
 
 
-showMessageDialog(context = this, message = sys_mess)
+                    showMessageDialog(context = this, message = sys_mess)
 
                     true
                 }
@@ -198,17 +198,25 @@ showMessageDialog(context = this, message = sys_mess)
                 R.id.temp_min_max -> {
 
 
-                  tempMaxMin(this, min_Temp,max_Temp)
+                    tempMaxMin(this, min_Temp, max_Temp)
 
                     true
                 }
 
 
-
                 R.id.sea_level -> {
 
 
-                  showSeaLevel(this,sea_level)
+                    showSeaLevel(this, sea_level)
+
+                    true
+                }
+
+
+                R.id.humidity_level -> {
+
+
+                   humidity_level(this,humidity_level)
 
                     true
                 }
@@ -227,7 +235,7 @@ showMessageDialog(context = this, message = sys_mess)
             mPopup.javaClass
                 .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
                 .invoke(mPopup, true)
-        } catch (e: Exception){
+        } catch (e: Exception) {
             Log.e("Main", "Error showing menu icons.", e)
         } finally {
             popupMenu.show()
@@ -236,12 +244,31 @@ showMessageDialog(context = this, message = sys_mess)
 
     }
 
+
+    fun  humidity_level(context: Context, humidity_level: String) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Humidity Level")
+        builder.setMessage(humidity_level)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
+
+
     fun showSeaLevel(context: Context, sea_level: String) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle("Sea Level")
         builder.setMessage(sea_level)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
+    }
 
-    fun tempMaxMin(context: Context, min: String, max : String) {
+    fun tempMaxMin(context: Context, min: String, max: String) {
         val builder = AlertDialog.Builder(context)
         builder.setTitle("Temperature")
         val message = "Min Temp: $min\nMax Temp: $max"
@@ -563,6 +590,8 @@ showMessageDialog(context = this, message = sys_mess)
 
             min_Temp = weatherList.main.temp_min.toString()
             max_Temp = weatherList.main.temp_max.toString()
+            humidity_level = weatherList.main.humidity.toString()
+
 
             // Here we update the main icon
             when (weatherList.weather[z].icon) {
