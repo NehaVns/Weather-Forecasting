@@ -26,4 +26,11 @@
 
         />
 
+
+    <item android:id="@+id/temp_min_max"
+        android:title="Temp Min-Max"
+        android:icon="@drawable/baseline_severe_cold_24"
+
+        />
+
 </menu>
