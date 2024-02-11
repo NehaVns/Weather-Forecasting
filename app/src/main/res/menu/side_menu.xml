@@ -36,6 +36,9 @@
 
 
     <item
+        android:id="@+id/ic_share_Code"
+        android:icon="@drawable/ic_code"
+        android:title="Share Code" />
         android:id="@+id/ic_open"
         android:icon="@drawable/ic_book"
         android:title="Open Source Library" />
