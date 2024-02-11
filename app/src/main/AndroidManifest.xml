@@ -18,21 +18,24 @@
         android:theme="@style/Theme.WeatherApp"
         tools:targetApi="31">
         <activity
+            android:name="com.weather.weatherapp.privacy_policy_page"
+            android:exported="false" />
+        <activity
             android:name="com.weather.weatherapp.Splash_Screen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.weather.weatherapp.AboutUs"
+        <activity
+            android:name="com.weather.weatherapp.AboutUs"
             android:exported="false" />
         <activity
             android:name="com.weather.weatherapp.MainActivity"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
