@@ -79,7 +79,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#EDF8FD"
+                    android:background="#F7FDFF"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -103,7 +103,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="end"
                             android:fontFamily="@font/protestrevolution_regular"
-
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
@@ -115,7 +114,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="end"
                             android:fontFamily="@font/protestrevolution_regular"
-
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
                             tools:text="condition" />
@@ -138,7 +136,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#EDF8FD"
+                    android:background="#F7FDFF"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -202,7 +200,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#EDF8FD"
+                    android:background="#F7FDFF"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -262,7 +260,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#EDF8FD"
+                    android:background="#F7FDFF"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -298,7 +296,6 @@
                             android:layout_height="wrap_content"
                             android:gravity="end"
                             android:fontFamily="@font/protestrevolution_regular"
-
                             android:text="@string/miles_per_hour"
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size" />
@@ -321,7 +318,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#EDF8FD"
+                android:background="#F7FDFF"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:padding="@dimen/card_view_content_padding">
