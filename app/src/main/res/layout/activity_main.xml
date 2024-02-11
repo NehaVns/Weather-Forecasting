@@ -65,9 +65,24 @@
             android:contentDescription="@string/image_contentDescription"
             app:srcCompat="@drawable/snowflake" />
 
+        <TextView
+            android:fontFamily="@font/protestrevolution_regular"
+            android:id="@+id/timeDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="time"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            />
+
+
+
 
         <LinearLayout
-            android:layout_marginTop="@dimen/_50dp"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
