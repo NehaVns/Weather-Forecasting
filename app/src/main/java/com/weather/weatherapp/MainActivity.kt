@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
 
     private var mLatitude: Double = 0.0
+    private var sys_mess : String = "Mess"
 
     // A global variable for Current Longitude
     private var mLongitude: Double = 0.0
@@ -180,6 +181,15 @@ class MainActivity : AppCompatActivity() {
                 }
 
 
+                R.id.Sys_Message -> {
+
+
+showMessageDialog(context = this, message = sys_mess)
+
+                    true
+                }
+
+
                 else -> super.onOptionsItemSelected(item)
             }
 
@@ -200,6 +210,17 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun showMessageDialog(context: Context, message: String) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Message")
+        builder.setMessage(message)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
     fun showLocationDialog(context: Context, latitude: Double, longitude: Double) {
@@ -495,6 +516,7 @@ class MainActivity : AppCompatActivity() {
             binding?.tvCountry?.text = weatherList.sys.country
             binding?.tvSunriseTime?.text = unixTime(weatherList.sys.sunrise.toLong())
             binding?.tvSunsetTime?.text = unixTime(weatherList.sys.sunset.toLong())
+            sys_mess = weatherList.sys.message.toString()
 
             // Here we update the main icon
             when (weatherList.weather[z].icon) {
