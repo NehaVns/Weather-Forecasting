@@ -70,6 +70,9 @@ class MainActivity : AppCompatActivity() {
             Toast.LENGTH_LONG
         ).show()
 
+        val currentDateTime = getCurrentDateTimeIn12HourFormat()
+        binding?.timeDate?.text = currentDateTime
+
         if (!isLocationEnabled()) {
             Toast.makeText(
                 this,
@@ -466,5 +469,11 @@ class MainActivity : AppCompatActivity() {
             SimpleDateFormat("HH:mm:ss")
         sdf.timeZone = TimeZone.getDefault()
         return sdf.format(date)
+    }
+
+    private fun getCurrentDateTimeIn12HourFormat(): String {
+        val dateFormat = SimpleDateFormat("yyyy-MM-dd hh:mm:ss a", Locale.getDefault())
+        val currentDateAndTime: String = dateFormat.format(Date())
+        return currentDateAndTime
     }
 }
