@@ -140,11 +140,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.reportBug -> ReportBug()
                 R.id.ic_feedback -> feedback()
                 R.id.ic_share -> share()
-
+                R.id.ic_privacy -> privacy()
             }
             closeDrawer()
             false
         }
+    }
+
+
+    private fun privacy(){
+        val intent = Intent(this@MainActivity, privacy_policy_page::class.java)
+        startActivity(intent)
     }
 
 

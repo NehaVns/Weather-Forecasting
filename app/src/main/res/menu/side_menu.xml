@@ -29,5 +29,10 @@
         android:icon="@drawable/baseline_share_24"
         android:title="Share Application" />
 
+    <item
+        android:id="@+id/ic_privacy"
+        android:icon="@drawable/ic_privacy"
+        android:title="Privacy Policy" />
+
 
 </menu>
