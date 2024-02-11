@@ -35,4 +35,10 @@
         android:title="Privacy Policy" />
 
 
+    <item
+        android:id="@+id/ic_open"
+        android:icon="@drawable/ic_book"
+        android:title="Open Source Library" />
+
+
 </menu>

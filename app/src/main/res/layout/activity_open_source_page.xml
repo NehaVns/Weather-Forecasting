@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weather.weatherapp.open_source_page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:id="@+id/flheading"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#00A9FF"
+            android:elevation="@dimen/_20dp">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/menuButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:gravity="start"
+                app:iconTint="@android:color/white">
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <TextView
+                android:id="@+id/tv_appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/protestrevolution_regular"
+                android:gravity="center"
+                android:text="Open Source Library"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_25sp" />
+
+
+        </FrameLayout>
+
+
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/open_source_library"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
