@@ -85,7 +85,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#F7FDFF"
+                    android:background="@color/f7fdff"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -142,7 +142,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#F7FDFF"
+                    android:background="@color/f7fdff"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -206,7 +206,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#F7FDFF"
+                    android:background="@color/f7fdff"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -266,7 +266,7 @@
 
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#F7FDFF"
+                    android:background="@color/f7fdff"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:padding="@dimen/card_view_content_padding">
@@ -324,7 +324,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#F7FDFF"
+                android:background="@color/f7fdff"
                 android:gravity="center_vertical"
                 android:orientation="vertical"
                 android:padding="@dimen/card_view_content_padding">
@@ -448,7 +448,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#EDF8FD"
+        android:background="@color/edf8fd"
         android:theme="@style/Theme.AppCompat.DayNight"
         app:headerLayout="@layout/menu_header"
         app:menu="@menu/side_menu"
