@@ -20,12 +20,17 @@
         />
 
 
+    <item android:id="@+id/sea_level"
+        android:title="Sea Level"
+        android:icon="@drawable/baseline_water_drop_24"
+
+        />
+
+
     <item android:id="@+id/temp_min_max"
         android:title="Temp Min-Max"
         android:icon="@drawable/baseline_severe_cold_24"
 
         />
-
-
 
 </menu>

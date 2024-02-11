@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
 
     // A global variable for Current Longitude
     private var mLongitude: Double = 0.0
+    private var sea_level : String = "Mess"
+
     // END
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -203,6 +205,15 @@ showMessageDialog(context = this, message = sys_mess)
 
 
 
+                R.id.sea_level -> {
+
+
+                  showSeaLevel(this,sea_level)
+
+                    true
+                }
+
+
                 else -> super.onOptionsItemSelected(item)
             }
 
@@ -225,6 +236,10 @@ showMessageDialog(context = this, message = sys_mess)
 
     }
 
+    fun showSeaLevel(context: Context, sea_level: String) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Sea Level")
+        builder.setMessage(sea_level)
 
     fun tempMaxMin(context: Context, min: String, max : String) {
         val builder = AlertDialog.Builder(context)
@@ -236,6 +251,7 @@ showMessageDialog(context = this, message = sys_mess)
         val dialog = builder.create()
         dialog.show()
     }
+
 
     fun showMessageDialog(context: Context, message: String) {
         val builder = AlertDialog.Builder(context)
@@ -542,6 +558,9 @@ showMessageDialog(context = this, message = sys_mess)
             binding?.tvSunriseTime?.text = unixTime(weatherList.sys.sunrise.toLong())
             binding?.tvSunsetTime?.text = unixTime(weatherList.sys.sunset.toLong())
             sys_mess = weatherList.sys.message.toString()
+
+            sea_level = weatherList.main.sea_level.toString()
+
             min_Temp = weatherList.main.temp_min.toString()
             max_Temp = weatherList.main.temp_max.toString()
 
