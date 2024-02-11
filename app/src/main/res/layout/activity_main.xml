@@ -52,6 +52,16 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_25sp" />
 
+            <ImageButton
+                android:id="@+id/btn_home_page_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/menu_icon"
+                android:layout_gravity="end"
+                android:layout_marginRight="2dp"/>
+
 
         </FrameLayout>
 

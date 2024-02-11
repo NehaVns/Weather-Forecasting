@@ -17,6 +17,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
@@ -24,6 +25,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.lifecycleScope
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.google.android.gms.location.*
@@ -35,6 +37,7 @@ import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.weather.Network.WeatherService
 import com.weather.models.WeatherResponse
+import kotlinx.coroutines.launch
 import retrofit.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -148,6 +151,50 @@ class MainActivity : AppCompatActivity() {
             closeDrawer()
             false
         }
+
+        binding?.btnHomePageMenu?.setOnClickListener {
+            popup()
+        }
+    }
+
+
+
+    private fun popup() {
+        val popupMenu = PopupMenu(this, binding?.btnHomePageMenu)
+        popupMenu.inflate(R.menu.home_page_menu)
+
+        popupMenu.setOnMenuItemClickListener { item ->
+            when (item.itemId) {
+
+                R.id.refresh -> {
+
+
+                    getLocationWeatherDetails()
+
+                    true
+                }
+
+
+                else -> super.onOptionsItemSelected(item)
+            }
+
+
+        }
+
+        try {
+            val fieldMPopup = PopupMenu::class.java.getDeclaredField("mPopup")
+            fieldMPopup.isAccessible = true
+            val mPopup = fieldMPopup.get(popupMenu)
+            mPopup.javaClass
+                .getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                .invoke(mPopup, true)
+        } catch (e: Exception){
+            Log.e("Main", "Error showing menu icons.", e)
+        } finally {
+            popupMenu.show()
+        }
+
+
     }
 
 
