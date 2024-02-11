@@ -36,6 +36,7 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.weather.Network.WeatherService
+import com.weather.models.Coord
 import com.weather.models.WeatherResponse
 import kotlinx.coroutines.launch
 import retrofit.*
@@ -174,6 +175,14 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
 
+                R.id.coordinates -> {
+
+
+                    showLocationDialog(this,mLatitude,mLongitude )
+
+                    true
+                }
+
 
                 else -> super.onOptionsItemSelected(item)
             }
@@ -195,6 +204,18 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun showLocationDialog(context: Context, latitude: Double, longitude: Double) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Coordinates")
+        val message = "Latitude: $latitude\nLongitude: $longitude"
+        builder.setMessage(message)
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
 

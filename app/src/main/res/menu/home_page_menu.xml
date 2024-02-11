@@ -7,4 +7,10 @@
 
         />
 
+    <item android:id="@+id/coordinates"
+        android:title="Coordinates data"
+        android:icon="@drawable/baseline_location_pin_24"
+
+        />
+
 </menu>
