@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="#00A9FF"
-            android:elevation="20dp">
+            android:elevation="@dimen/_20dp">
 
 
             <androidx.appcompat.widget.Toolbar
@@ -44,7 +44,7 @@
                 android:gravity="center"
                 android:text="@string/app_name"
                 android:textColor="@color/white"
-                android:textSize="25sp" />
+                android:textSize="@dimen/_25sp" />
 
 
         </FrameLayout>
@@ -55,13 +55,13 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
+            android:layout_margin="@dimen/_10dp"
             android:contentDescription="@string/image_contentDescription"
             app:srcCompat="@drawable/snowflake" />
 
 
         <LinearLayout
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="@dimen/_50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
