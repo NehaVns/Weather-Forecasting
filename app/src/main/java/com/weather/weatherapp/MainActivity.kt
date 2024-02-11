@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
             Toast.LENGTH_LONG
         ).show()
 
-        val currentDateTime = getCurrentDateTimeIn12HourFormat()
+        val currentDateTime = getCurrentDateTimeIn12HourFormatWithDay()
         binding?.timeDate?.text = currentDateTime
 
         if (!isLocationEnabled()) {
@@ -471,8 +471,9 @@ class MainActivity : AppCompatActivity() {
         return sdf.format(date)
     }
 
-    private fun getCurrentDateTimeIn12HourFormat(): String {
-        val dateFormat = SimpleDateFormat("yyyy-MM-dd hh:mm:ss a", Locale.getDefault())
+    private fun getCurrentDateTimeIn12HourFormatWithDay(): String {
+        val dateFormat = SimpleDateFormat("EEEE, dd-MM-yyyy\nhh:mm:ss a", Locale.getDefault())
+        dateFormat.timeZone = TimeZone.getTimeZone("Asia/Kolkata") // Set time zone to Indian Standard Time (IST)
         val currentDateAndTime: String = dateFormat.format(Date())
         return currentDateAndTime
     }
