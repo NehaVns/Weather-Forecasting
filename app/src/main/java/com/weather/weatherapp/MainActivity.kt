@@ -141,6 +141,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_feedback -> feedback()
                 R.id.ic_share -> share()
                 R.id.ic_privacy -> privacy()
+                R.id.ic_open -> Open_souce()
             }
             closeDrawer()
             false
@@ -150,6 +151,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun privacy(){
         val intent = Intent(this@MainActivity, privacy_policy_page::class.java)
+        startActivity(intent)
+    }
+
+    private fun Open_souce(){
+        val intent = Intent(this@MainActivity, open_source_page::class.java)
         startActivity(intent)
     }
 
