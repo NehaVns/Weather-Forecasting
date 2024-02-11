@@ -20,4 +20,11 @@
     <dimen name="sunrise_marginTop">10dp</dimen>
     <dimen name="divider_height">1dp</dimen>
     <dimen name="divider_margin">16dp</dimen>
+    <dimen name="_20dp">20dp</dimen>
+    <dimen name="_25sp">25sp</dimen>
+    <dimen name="_10dp">10dp</dimen>
+    <dimen name="_50dp">50dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
+    <dimen name="_80sp">80sp</dimen>
+    <dimen name="_20sp">20sp</dimen>
 </resources>
