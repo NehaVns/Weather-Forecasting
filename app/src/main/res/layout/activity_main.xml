@@ -106,7 +106,7 @@
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
-                            tools:text="Weather" />
+                           android:text="@string/weather" />
 
                         <TextView
                             android:id="@+id/tv_main_description"
@@ -116,7 +116,7 @@
                             android:fontFamily="@font/protestrevolution_regular"
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="condition" />
+                            tools:text="@string/condition" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -164,7 +164,7 @@
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
-                            tools:text="Degree" />
+                           android:text="@string/degree" />
 
                         <TextView
                             android:id="@+id/tv_humidity"
@@ -175,7 +175,7 @@
 
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="per cent" />
+                            tools:text="@string/per_cent" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -227,7 +227,7 @@
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
-                            tools:text="Minimum" />
+                          android:text="@string/minimum" />
 
                         <TextView
                             android:id="@+id/tv_max"
@@ -238,7 +238,7 @@
 
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="Maximum" />
+                            tools:text="@string/maximum" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -288,7 +288,7 @@
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
-                            tools:text="Wind" />
+                            tools:text="@string/wind" />
 
                         <TextView
                             android:id="@+id/tv_speed_unit"
@@ -351,7 +351,7 @@
                             android:textColor="@color/primary_text_color"
                             android:textSize="@dimen/label_text_size"
                             android:textStyle="bold"
-                            tools:text="Name" />
+                            tools:text="@string/name" />
 
                         <TextView
                             android:id="@+id/tv_country"
@@ -362,7 +362,7 @@
 
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="Country" />
+                            tools:text="@string/country" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -401,7 +401,7 @@
 
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="Sunrise" />
+                            tools:text="@string/sunrise" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -424,7 +424,7 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/secondary_text_color"
                             android:textSize="@dimen/value_text_size"
-                            tools:text="Sunset"
+                            tools:text="@string/sunset"
                             android:fontFamily="@font/protestrevolution_regular"
                             />
                     </LinearLayout>

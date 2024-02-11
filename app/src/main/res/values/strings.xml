@@ -12,4 +12,15 @@
     <string name="email_body">Email body</string>
     <string name="share_title">Shring the weather application\n</string>
     <string name="About_Content">Welcome to the Weather App, your go-to source for accurate and up-to-date weather forecasts tailored to your location. Whether you\'re planning your day, organizing outdoor activities, or simply staying informed, our app delivers comprehensive weather information to keep you prepared for any conditions. Our commitment to accuracy and reliability ensures that you receive timely updates on current weather conditions, hourly forecasts, and extended outlooks. With intuitive features and user-friendly interface, navigating through weather data has never been easier.</string>
+    <string name="weather">Weather</string>
+    <string name="degree">Degree</string>
+    <string name="minimum">Minimum</string>
+    <string name="wind">Wind</string>
+    <string name="name">Name</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="country">Country</string>
+    <string name="maximum">Maximum</string>
+    <string name="per_cent">per cent</string>
+    <string name="condition">condition</string>
 </resources>
