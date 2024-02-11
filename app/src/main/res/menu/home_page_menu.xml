@@ -33,4 +33,10 @@
 
         />
 
+
+    <item android:id="@+id/humidity_level"
+        android:title="Humidity Level"
+        android:icon="@drawable/baseline_air_24"
+
+        />
 </menu>
