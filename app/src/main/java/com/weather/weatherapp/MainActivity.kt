@@ -141,10 +141,17 @@ class MainActivity : AppCompatActivity() {
                 R.id.ic_feedback -> feedback()
                 R.id.ic_share -> share()
                 R.id.ic_privacy -> privacy()
+                R.id.ic_share_Code ->  openLink("https://github.com/NehaVns/Weather-Forecasting")
             }
             closeDrawer()
             false
         }
+    }
+
+
+    private fun openLink(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
     }
 
 

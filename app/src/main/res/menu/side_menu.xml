@@ -35,4 +35,10 @@
         android:title="Privacy Policy" />
 
 
+    <item
+        android:id="@+id/ic_share_Code"
+        android:icon="@drawable/ic_code"
+        android:title="Share Code" />
+
+
 </menu>
