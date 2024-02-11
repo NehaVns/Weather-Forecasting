@@ -483,4 +483,18 @@ class MainActivity : AppCompatActivity() {
         val currentDateAndTime: String = dateFormat.format(Date())
         return currentDateAndTime
     }
+
+    override fun onBackPressed() {
+        val alertDialogBuilder = AlertDialog.Builder(this)
+        alertDialogBuilder.setTitle("Exit App")
+        alertDialogBuilder.setMessage("Are you sure you want to exit the app?")
+        alertDialogBuilder.setPositiveButton("Yes") { _, _ ->
+            super.onBackPressed()
+        }
+        alertDialogBuilder.setNegativeButton("No") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val alertDialog = alertDialogBuilder.create()
+        alertDialog.show()
+    }
 }
