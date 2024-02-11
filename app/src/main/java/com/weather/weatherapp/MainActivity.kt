@@ -12,7 +12,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
-import android.text.Html
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -25,7 +24,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.lifecycle.lifecycleScope
 import com.example.weatherapp.R
 import com.example.weatherapp.databinding.ActivityMainBinding
 import com.google.android.gms.location.*
@@ -36,9 +34,7 @@ import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 import com.weather.Network.WeatherService
-import com.weather.models.Coord
 import com.weather.models.WeatherResponse
-import kotlinx.coroutines.launch
 import retrofit.*
 import java.text.SimpleDateFormat
 import java.util.*
@@ -526,7 +522,7 @@ class MainActivity : AppCompatActivity() {
                 "03d" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
                 "04d" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
                 "04n" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
-                "10d" -> binding?.ivMain?.setImageResource(R.drawable.rain)
+                "10d" -> binding?.ivMain?.setImageResource(R.drawable.rain_pic)
                 "11d" -> binding?.ivMain?.setImageResource(R.drawable.storm)
                 "13d" -> binding?.ivMain?.setImageResource(R.drawable.snowflake)
                 "01n" -> binding?.ivMain?.setImageResource(R.drawable.cloud)
