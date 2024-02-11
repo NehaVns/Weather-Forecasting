@@ -38,6 +38,8 @@ import com.weather.models.WeatherResponse
 import retrofit.*
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.math.max
+import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
 
@@ -53,6 +55,8 @@ class MainActivity : AppCompatActivity() {
 
     private var mLatitude: Double = 0.0
     private var sys_mess : String = "Mess"
+    private var max_Temp: String = "Mess"
+    private var min_Temp: String = "Mess"
 
     // A global variable for Current Longitude
     private var mLongitude: Double = 0.0
@@ -189,6 +193,15 @@ showMessageDialog(context = this, message = sys_mess)
                     true
                 }
 
+                R.id.temp_min_max -> {
+
+
+                  tempMaxMin(this, min_Temp,max_Temp)
+
+                    true
+                }
+
+
 
                 else -> super.onOptionsItemSelected(item)
             }
@@ -210,6 +223,18 @@ showMessageDialog(context = this, message = sys_mess)
         }
 
 
+    }
+
+
+    fun tempMaxMin(context: Context, min: String, max : String) {
+        val builder = AlertDialog.Builder(context)
+        builder.setTitle("Temperature")
+        val message = "Min Temp: $min\nMax Temp: $max"
+        builder.setPositiveButton("OK") { dialog, _ ->
+            dialog.dismiss()
+        }
+        val dialog = builder.create()
+        dialog.show()
     }
 
     fun showMessageDialog(context: Context, message: String) {
@@ -517,6 +542,8 @@ showMessageDialog(context = this, message = sys_mess)
             binding?.tvSunriseTime?.text = unixTime(weatherList.sys.sunrise.toLong())
             binding?.tvSunsetTime?.text = unixTime(weatherList.sys.sunset.toLong())
             sys_mess = weatherList.sys.message.toString()
+            min_Temp = weatherList.main.temp_min.toString()
+            max_Temp = weatherList.main.temp_max.toString()
 
             // Here we update the main icon
             when (weatherList.weather[z].icon) {
